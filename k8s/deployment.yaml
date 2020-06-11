@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eswj-cms
+  namespace: eswj
+  labels:
+    app: eswj-cms
+spec:
+  selector:
+    matchLabels:
+      app: eswj-cms
+  template:
+    metadata:
+      labels:
+        app: eswj-cms
+    spec:
+      containers:
+        - name: ghost
+          image: ghost
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 2368
+              name: cms-port
+          env:
+            - name: url
+              value: https://cms.everysecondwithjesus.org
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: eswj
+  name: eswj-cms
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: cms-port
+  selector:
+    app: eswj-cms
+
+
+
+
+
