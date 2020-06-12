@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - cms.everysecondwithjesus.org
-      secretName: cms.everysecondwithjesus.org-tls
+        - blog.everysecondwithjesus.org
+      secretName: blog.everysecondwithjesus.org-tls
   rules:
-    - host: cms.everysecondwithjesus.org
+    - host: blog.everysecondwithjesus.org
       http:
         paths:
           - backend:

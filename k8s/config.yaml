@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eswj-config
+  namespace: eswj
+data:
+  database__client: mysql
+  database__connection__host: mysql
+  database__connection__port: "3306"
+  mail__transport: SMTP
+#  mail__options__service: Zoho
+  mail__options__port: "587"
+  mail__options__host: smtp.zoho.com

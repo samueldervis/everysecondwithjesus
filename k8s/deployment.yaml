@@ -21,9 +21,43 @@ spec:
           ports:
             - containerPort: 2368
               name: cms-port
+          envFrom:
+            - configMapRef:
+                name: eswj-config
           env:
             - name: url
-              value: https://cms.everysecondwithjesus.org
+              value: https://blog.everysecondwithjesus.org
+            - name: database__connection__password
+              valueFrom:
+                secretKeyRef:
+                  key: db_password
+                  name: eswj-secret
+            - name: database__connection__user
+              valueFrom:
+                secretKeyRef:
+                  key: db_user
+                  name: eswj-secret
+            - name: database__connection__database
+              valueFrom:
+                secretKeyRef:
+                  key: db_name
+                  name: eswj-secret
+            - name: mail__from
+              valueFrom:
+                secretKeyRef:
+                  key: mail_from
+                  name: eswj-secret
+            - name: mail__options__auth__pass
+              valueFrom:
+                secretKeyRef:
+                  key: mail_pass
+                  name: eswj-secret
+            - name: mail__options__auth__user
+              valueFrom:
+                secretKeyRef:
+                  key: mail_user
+                  name: eswj-secret
+
 ---
 apiVersion: v1
 kind: Service
