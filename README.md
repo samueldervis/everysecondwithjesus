@@ -1,17 +1,8 @@
-# Gatsby Starter Ghost
+# Every Second With Jesus
 
-A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2db4a0bd-8d41-4c43-845e-d857ecfbe3ad/deploy-status)](https://app.netlify.com/sites/vibrant-wilson-ca6a77/deploys)
 
-**Demo:** https://gatsby.ghost.org
-
-&nbsp;
-
-![gatsby-starter-ghost](https://user-images.githubusercontent.com/120485/50913567-8ab8e380-142c-11e9-9e78-de02ded12fc6.jpg)
-
-&nbsp;
-
-
-# Installing
+# Running
 
 ```bash
 # With Gatsby CLI
@@ -105,4 +96,4 @@ Gatsby `develop` uses the `development` config in `.ghost.json` - while Gatsby `
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2020 Every Second With Jesus - Released under the [MIT license](LICENSE).
